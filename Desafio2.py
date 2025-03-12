@@ -1,22 +1,13 @@
-import java.util.Scanner;
+# Programa para verificar se três segmentos podem formar um triângulo
 
-public class Triangulo {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        
-        // Lendo os três segmentos de reta
-        System.out.print("Digite o comprimento do primeiro segmento: ");
-        int a = sc.nextInt();
-        System.out.print("Digite o comprimento do segundo segmento: ");
-        int b = sc.nextInt();
-        System.out.print("Digite o comprimento do terceiro segmento: ");
-        int c = sc.nextInt();
+# Entrada dos três segmentos de reta
+a = float(input("Digite o comprimento do primeiro segmento: "))
+b = float(input("Digite o comprimento do segundo segmento: "))
+c = float(input("Digite o comprimento do terceiro segmento: "))
 
-        // Verificando se é possível formar um triângulo
-        if (a < b + c && b < a + c && c < a + b) {
-            System.out.println("É possível formar um triângulo.");
-        } else {
-            System.out.println("Não é possível formar um triângulo.");
-        }
-    }
-}
+# Para formar um triângulo, cada lado precisa ser menor que a soma dos outros dois
+# Vamos verificar essa condição
+if a < b + c and b < a + c and c < a + b:
+    print("Os segmentos podem formar um triângulo.")
+else:
+    print("Os segmentos NÃO podem formar um triângulo.")
